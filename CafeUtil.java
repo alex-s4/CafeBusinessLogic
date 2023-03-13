@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.text.NumberFormat;
 
 public class CafeUtil{
 
@@ -59,6 +60,15 @@ public class CafeUtil{
         System.out.println(customers);
     }
 
+    public void printPriceChart(String product, double price, int maxQuantity){
+        NumberFormat currency = NumberFormat.getCurrencyInstance();
+        System.out.println(product);
+        for(int i=1; i<=maxQuantity; i++){
+            double totalPrice = i*price;
+            String priceCurrency = currency.format(totalPrice);
 
+            System.out.println(i+" - "+priceCurrency);
+        }
+    }
 
 }
