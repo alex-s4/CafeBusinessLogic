@@ -1,4 +1,4 @@
-
+import java.util.ArrayList;
 
 public class CafeUtil{
 
@@ -38,9 +38,19 @@ public class CafeUtil{
         return totalPrice;
     }
 
+    /*
+    Given an ArrayList of menu items (strings), print out each index and menu item.
+    Sample output given an ArrayList with the items "drip coffee", "cappuccino", "latte" and "mocha"
+    */
 
-
-
+    public void displayMenu(ArrayList <String> menuItems){
+        for(int i=0; i<menuItems.size(); i++){
+            System.out.printf("%d %s",i, menuItems.get(i) + "\n");
+        }
+    }
 
     
+
+
+
 }
