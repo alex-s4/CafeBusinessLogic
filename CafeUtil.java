@@ -71,4 +71,17 @@ public class CafeUtil{
         }
     }
 
+    public boolean displayMenu(ArrayList<String> menuItems, ArrayList<Double> prices){
+        NumberFormat currency = NumberFormat.getCurrencyInstance();
+        if (menuItems.size() != prices.size()){
+            return false;
+        } else if (menuItems.size() == prices.size()){
+            for(int i=0;i<menuItems.size();i++){
+                String formattedPrice = currency.format(prices.get(i));
+                System.out.println(i+" "+menuItems.get(i)+" "+formattedPrice);
+            }   
+        }
+        return true;
+    }
+
 }
