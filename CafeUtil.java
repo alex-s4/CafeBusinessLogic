@@ -54,10 +54,11 @@ public class CafeUtil{
     public void addCustomer(ArrayList<String> customers){
         System.out.println("Please enter your name:");
         String userName = System.console().readLine();
+        customers.add(userName);
         System.out.printf("Hello, %s", userName + "\n");
         System.out.println("There are " +customers.size()+ " people in front of you");
-        customers.add(userName);
-        System.out.println(customers);
+        
+        // System.out.println(customers);
     }
 
     public void printPriceChart(String product, double price, int maxQuantity){
